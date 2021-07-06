@@ -25,6 +25,25 @@ public class HomeTest {
         WebElement home = elements.get(0);
         home.click();
     }
+    @Test
+    public void homeLogin(){
+        //open login form
+        wd.findElement(By.cssSelector("[href='/login']")).click();
+        WebElement email = wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        email.click();
+        email.clear();
+        email.sendKeys("anat@gmail.com");
+        WebElement password = wd.findElement(By.cssSelector("input[placeholder='Password']"));
+        password.click();
+        password.clear();
+        password.sendKeys("Aa12345$");
+        wd.findElement(By.cssSelector("button:nth-child(4)")).click();
+    }
+    @Test
+    public void findItaly(){
+        wd.navigate().to("https://www.w3schools.com/css/css_table.asp");
+        wd.findElement(By.cssSelector(".alt:last-child td:last-child"));
+    }
 
     @AfterMethod
     public void tearDown() {
