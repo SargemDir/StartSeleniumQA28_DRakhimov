@@ -27,11 +27,11 @@ public class W3schools {
         List<WebElement> columns = wd.findElements(By.cssSelector("tr:first-child th"));
         System.out.println("Number of columns: " + columns.size());
         List<WebElement> row3 = wd.findElements(By.cssSelector("tr:nth-child(3)"));
-        for (WebElement i : row3){
+        for (WebElement i : row3) {
             System.out.println(i.getText());
         }
         List<WebElement> lastColumns = wd.findElements(By.cssSelector("tr :last-child"));
-        for (WebElement i : lastColumns){
+        for (WebElement i : lastColumns) {
             System.out.println(i.getText());
         }
         WebElement maria = wd.findElement(By.cssSelector("tr:nth-child(2) td:nth-child(2)"));
