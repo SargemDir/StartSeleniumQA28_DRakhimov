@@ -42,7 +42,10 @@ public class HomeTest {
     @Test
     public void findItaly(){
         wd.navigate().to("https://www.w3schools.com/css/css_table.asp");
-        wd.findElement(By.cssSelector(".alt:last-child td:last-child"));
+       // wd.findElement(By.cssSelector(".alt:last-child td:last-child"));
+        wd.findElement(By.cssSelector("tbody>:last-child>:last-child"));
+
+
     }
 
     @AfterMethod
